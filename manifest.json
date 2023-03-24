@@ -6,11 +6,7 @@
   "permissions": ["activeTab", "clipboardWrite"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
+    "default_icon": "icon.png"
   },
   "content_scripts": [
     {
@@ -18,9 +14,6 @@
       "js": ["content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "icons": {
     "16": "icon.png",
     "48": "icon.png",

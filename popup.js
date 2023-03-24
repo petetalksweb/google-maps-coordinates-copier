@@ -16,11 +16,13 @@ function displayCoordinates(lat, lng) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    chrome.runtime.sendMessage({ type: 'requestCoordinates' }, (response) => {
-        if (response && response.coordinates) {
-            displayCoordinates(response.coordinates.lat, response.coordinates.lng);
-        } else {
-            displayError();
-        }
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, { type: 'requestCoordinates' }, (response) => {
+            if (response && response.data) {
+                displayCoordinates(response.data.lat, response.data.lng);
+            } else {
+                displayError();
+            }
+        });
     });
 });

@@ -1,3 +1,9 @@
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.type === 'requestCoordinates') {
+        sendResponse({ data: findGoogleMapsLink() });
+    }
+});
+
 function findGoogleMapsLink() {
     const anchors = document.getElementsByTagName('a');
     for (const anchor of anchors) {
@@ -8,5 +14,3 @@ function findGoogleMapsLink() {
     }
     return null;
 }
-
-chrome.runtime.sendMessage({ type: 'coordinates', data: findGoogleMapsLink() });
