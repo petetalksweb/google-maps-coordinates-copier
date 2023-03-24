@@ -17,7 +17,10 @@ function displayCoordinates(lat, lng) {
 
 document.addEventListener('DOMContentLoaded', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.executeScript(tabs[0].id, { file: 'content.js' }, () => {
+        chrome.scripting.executeScript({
+            target: { tabId: tabs[0].id },
+            files: ['content.js']
+        }, () => {
             setTimeout(() => {
                 chrome.tabs.sendMessage(tabs[0].id, { type: 'requestCoordinates' }, (response) => {
                     if (chrome.runtime.lastError) {

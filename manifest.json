@@ -3,7 +3,7 @@
   "name": "Google Maps Coordinate Copier",
   "version": "1.0",
   "description": "Copy latitude and longitude from Google Maps links on a webpage",
-  "permissions": ["activeTab", "clipboardWrite"],
+  "permissions": ["activeTab", "clipboardWrite", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
