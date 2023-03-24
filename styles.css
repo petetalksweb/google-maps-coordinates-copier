@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    min-width: 250px;
 }
 
 .hidden {
@@ -24,25 +25,27 @@ body {
 #error .left-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding-right: 24px;
+    min-width: 40px;
 }
 
-#error .left-column .sad-face {
+.sad-face {
     font-size: 72px;
+    color: #fff;
+    margin: 0;
+    padding-right: 16px;
 }
 
 #error .right-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 #error .right-column p {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     color: #fff;
     margin: 0;
 }
