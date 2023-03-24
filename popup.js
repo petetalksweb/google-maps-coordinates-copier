@@ -1,8 +1,10 @@
 function displayError() {
     document.getElementById('error').classList.remove('hidden');
+    document.getElementById('coordinates').classList.add('hidden');
 }
 
 function displayCoordinates(lat, lng) {
+    document.getElementById('error').classList.add('hidden');
     document.getElementById('coordinates').classList.remove('hidden');
     document.getElementById('latitude').textContent = lat;
     document.getElementById('longitude').textContent = lng;
