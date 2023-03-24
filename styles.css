@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 250px;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
