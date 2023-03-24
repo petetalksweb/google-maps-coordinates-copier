@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 chrome.tabs.sendMessage(tabs[0].id, { type: 'requestCoordinates' }, (response) => {
                     if (chrome.runtime.lastError) {
                         displayError();
-                    } else if (response && response.data) {
-                        displayCoordinates(response.data.lat, response.data.lng);
-                    } else {
+                    } else if (response === null) {
                         displayError();
+                    } else {
+                        displayCoordinates(response.data.lat, response.data.lng);
                     }
                 });
             }, 100);
