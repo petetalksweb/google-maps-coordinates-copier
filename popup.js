@@ -17,12 +17,17 @@ function displayCoordinates(lat, lng) {
 
 document.addEventListener('DOMContentLoaded', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, { type: 'requestCoordinates' }, (response) => {
-            if (response && response.data) {
-                displayCoordinates(response.data.lat, response.data.lng);
-            } else {
-                displayError();
-            }
-        });
+        // Add a small delay before sending the message
+        setTimeout(() => {
+            chrome.tabs.sendMessage(tabs[0].id, { type: 'requestCoordinates' }, (response) => {
+                if (chrome.runtime.lastError) {
+                    displayError();
+                } else if (response && response.data) {
+                    displayCoordinates(response.data.lat, response.data.lng);
+                } else {
+                    displayError();
+                }
+            });
+        }, 100);
     });
 });
