@@ -18,6 +18,7 @@ body {
     justify-content: center;
     height: 100%;
     background-color: #0078d7;
+    padding: 16px;
 }
 
 #error .left-column {
@@ -42,7 +43,7 @@ body {
 #error .right-column p {
     font-size: 24px;
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
     margin: 0;
 }
 
