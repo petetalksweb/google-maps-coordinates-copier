@@ -12,7 +12,7 @@ function displayCoordinates(lat, lng) {
     const copyButton = document.getElementById('copyButton');
     copyButton.addEventListener('click', () => {
         navigator.clipboard.writeText(`${lat}, ${lng}`).then(() => {
-            copyButton.textContent = 'Copied';
+            copyButton.textContent = 'Copied!';
         });
     });
 }

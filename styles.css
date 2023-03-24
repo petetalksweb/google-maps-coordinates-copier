@@ -59,10 +59,10 @@ body {
     font-weight: 500;
     color: #ffffff;
     background-color: #2196f3;
-    border-radius: 16px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 #copyButton:hover {
