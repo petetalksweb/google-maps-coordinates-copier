@@ -64,6 +64,23 @@ ChatGPT was able to handle a lot of things that I didn't know how to do, and did
 direction to get it working. I still got to take over the final design, a process that I enjoy. So, as of now, I think it's just going to make web development
 a lot more productive, and a lot more fun.
 
+## Where did you get that sweet, sweet icon?
+
+Prompt:
+> Can you give me a place to find an icon for this extension that does not require attribution?
+
+Response:
+> Sure, there are several websites where you can find icons for your extension that do not require attribution. Here are a few options:  
+> 
+> Flaticon (https://www.flaticon.com/)  
+> Icons8 (https://icons8.com/)  
+> Iconfinder (https://www.iconfinder.com/)  
+> Noun Project (https://thenounproject.com/)  
+>
+> Make sure to check the licensing terms of the icons you choose to ensure they are free to use without attribution.
+
+I ended up choosing this <a target="_blank" href="https://icons8.com/icon/62889/map-pin">Map Pin</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 ## Does ChatGPT have anything to add?
 
 Prompt:
@@ -71,3 +88,4 @@ Prompt:
 
 Response:
 > As an AI language model, I don't have personal experiences or opinions like humans do. However, I'm glad that I was able to assist you in building your Google Chrome extension. If you have any questions or need any further assistance, feel free to ask.
+
